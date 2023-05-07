@@ -1,0 +1,177 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(137, 221, 246);
+  }
+
+  .container {
+    width: 450px;
+    background-color: rgb(249, 246, 246);
+    border-radius: 8px;
+  }
+
+  .container h2 {
+    font-weight: 600;
+    font-size: 17px;
+    padding: 17px 16px;
+    border-bottom: 1px solid rgb(174, 173, 173);
+  }
+
+  .wrapper {
+    margin: 19px 22px;
+    position: relative;
+  }
+
+  .input-box input {
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid rgb(173, 170, 170);
+    border-radius: 4px;
+    color: rgb(23, 23, 23);
+    letter-spacing: 1px;
+    padding-left: 15px;
+  }
+
+  .input-box input::placeholder {
+    text-align: center;
+    color: rgb(69, 68, 68);
+  }
+
+  .fa-regular.fa-copy {
+    position: absolute;
+    right: 13px;
+    padding-top: 15px;
+    cursor: pointer;
+    color: rgb(145, 142, 142);
+    font-size: 18px;
+    opacity: .6;
+  }
+
+  .wrapper .pass-indicator {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(226, 231, 235);
+    margin-top: 15px;
+    border-radius: 25px;
+    position: relative;
+  }
+
+  .pass-indicator::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    border-radius: inherit;
+    background: rgb(242, 211, 7);
+    transition: 0.7s ease-in;
+  }
+
+  .pass-indicator#weak::before {
+    background: rgb(242, 24, 17);
+    width: 20%;
+  }
+
+  .pass-indicator#medium::before {
+    background: rgb(242, 211, 7);
+    width: 50%;
+  }
+
+  .pass-indicator#strong::before {
+    background: rgb(112, 233, 79);
+    width: 100%;
+  }
+
+  .wrapper .pass-length {
+    margin: 20px 0 15px;
+  }
+
+  .pass-length .details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pass-length input {
+    width: 100%;
+    height: 5px;
+  }
+
+  .pass-settings .options {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 18px;
+  }
+
+  .pass-settings .options .option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+    width: 50%;
+  }
+
+  .options .option label {
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .options .option input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  .generate-btn {
+    width: 100%;
+    font-size: 17px;
+    padding: 8px 0;
+    text-align: center;
+    margin: 10px 0;
+    background-color: rgb(36, 123, 229);
+    border: 1px solid rgb(13, 117, 243);
+    color: rgb(249, 246, 246);
+    border-radius: 7px;
+    cursor: pointer;
+    text-transform: uppercase;
+    opacity: .9;
+  }
+
+  .generate-btn:active {
+    opacity: 1;
+    transform: translateY(4px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 25px 50px -12px;
+  }
+
+  .generate-btn:hover {
+    opacity: 1;
+  }
+
+  @media screen and (max-width:400px) {
+    .options .option input {
+      width: 12px;
+      height: 12px;
+    }
+
+    .input-box input::placeholder {
+      text-align: left;
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width:295px) {
+    .fa-regular.fa-copy {
+      display: none;
+    }
+  }
